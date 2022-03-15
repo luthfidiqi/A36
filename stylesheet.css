@@ -1,3 +1,11 @@
+/* Font Style */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset Css */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 html, body,
 ul, ol, li,
 h1, h2, h3, h4, h5, h6, p, div {
@@ -22,6 +30,7 @@ a {
   clear: left;
 }
 
+
 .container {
   max-width: 1170px;
   width: 100%;
@@ -39,7 +48,6 @@ a {
 
 .top-wrapper h1 {
   margin:0;
-  opacity: 0.7;
   font-size: 45px;
   letter-spacing: 5px;
   margin-bottom: 10px;
@@ -47,7 +55,6 @@ a {
 
 .top-wrapper p {
   margin:0;
-  opacity: 0.7;
   margin-bottom: 3px;
 }
 
@@ -60,16 +67,12 @@ a {
   margin: 10px 0;
 }
 
-.signup {
-  background-color: #239b76;
-}
-
-.facebook {
+.digitalent {
   background-color: #3b5998;
   margin-right: 10px;
 }
 
-.twitter {
+.progate {
   background-color: #55acee;
 }
 
@@ -77,13 +80,17 @@ a {
   padding: 12px 24px;
   color: white;
   display: inline-block;
-  opacity: 0.8;
   border-radius: 4px;
   text-align: center;
 }
 
 .btn:hover {
-  opacity: 1;
+  transform: scale(1.08);
+  transition: 1s;
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -o-transform: scale(1.08);
 }
 
 .fa {
@@ -101,7 +108,8 @@ header {
 
 .logo {
   width: 124px;
-  margin-top: 20px;
+  margin-top: 15px;
+  color: white;
 }
 
 .header-left {
@@ -148,13 +156,24 @@ header {
   color: #5f5d60;
 }
 
-.heading h2 {
-  font-weight: normal;
+.lessons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lesson {
   float: left;
   width: 25%;
+}
+
+.lesson:hover {
+  transform: scale(1.08);
+  transition: 1s;
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -o-transform: scale(1.08);
 }
 
 .lesson-icon {
@@ -208,6 +227,10 @@ footer p {
   font-size: 12px;
 }
 
+footer h2 {
+  color: #5f5d60;
+}
+
 footer {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -216,6 +239,9 @@ footer {
 /* Responsive */
 /* Untuk Tablet */
 @media all and (max-width: 1000px) {
+  .lessons {
+    flex-direction: column;
+  }
   .lesson {
     width: 50%;
     margin-bottom: 50px;
@@ -232,6 +258,9 @@ footer {
 
 /* Untuk Smartphone */
 @media all and (max-width: 670px) {
+  .lessons {
+    display: flex;
+  }
   .lesson {
     width: 100%;
   }
